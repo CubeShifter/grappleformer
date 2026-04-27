@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c7do2iwvuye0p"]
+
+[ext_resource type="Script" uid="uid://cgyrnwgm25j0b" path="res://scripts/explosion_hook.gd" id="1_3xuvv"]
+[ext_resource type="Texture2D" uid="uid://dodcc680ewkph" path="res://assets/Explosion hook1.png" id="2_attkt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngnvv"]
+size = Vector2(16, 0)
+
+[node name="explosion hook" type="StaticBody2D" unique_id=535813181]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_3xuvv")
+metadata/_custom_type_script = "uid://e3ajc0mqoww2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=881560683]
+position = Vector2(8, 8)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_ngnvv")
+
+[node name="ExplosionHook1" type="Sprite2D" parent="." unique_id=1191225189]
+position = Vector2(11, 11)
+texture = ExtResource("2_attkt")

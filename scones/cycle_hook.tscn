@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bnev6n1f2w7nc"]
+
+[ext_resource type="Script" uid="uid://ct6h4ksekwod7" path="res://scripts/cycle_hook.gd" id="1_3m8nk"]
+[ext_resource type="Texture2D" uid="uid://cex4m88i3qwu6" path="res://assets/Hook.png" id="2_qrlu6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrlu6"]
+size = Vector2(16, 0)
+
+[node name="Cycle Hook" type="StaticBody2D" unique_id=748343633]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_3m8nk")
+metadata/_custom_type_script = "uid://e3ajc0mqoww2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1097944365]
+position = Vector2(8, 8)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_qrlu6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2092733135]
+position = Vector2(8, 8)
+texture = ExtResource("2_qrlu6")

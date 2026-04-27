@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cxk21dcwr5fht"]
+
+[ext_resource type="Script" uid="uid://bvjhckq2s407e" path="res://scripts/room.gd" id="1_20ufw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20ufw"]
+resource_local_to_scene = true
+
+[node name="room" type="Node2D" unique_id=939391888]
+script = ExtResource("1_20ufw")
+type = 2
+
+[node name="Player Detector" type="Area2D" parent="." unique_id=1649028491]
+collision_layer = 0
+collision_mask = 16
+
+[node name="Colliszon" type="CollisionShape2D" parent="Player Detector" unique_id=338412173]
+shape = SubResource("RectangleShape2D_20ufw")
+
+[connection signal="body_entered" from="Player Detector" to="." method="_on_player_detector_body_entered"]
+[connection signal="body_exited" from="Player Detector" to="." method="_on_player_detector_body_exited"]

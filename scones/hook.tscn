@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://k0s6ycope2y8"]
+
+[ext_resource type="Script" uid="uid://e3ajc0mqoww2" path="res://scripts/hook.gd" id="1_fh525"]
+[ext_resource type="Texture2D" uid="uid://cex4m88i3qwu6" path="res://assets/Hook.png" id="2_ifg5m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ka0lg"]
+size = Vector2(16, 0)
+
+[node name="Hook" type="StaticBody2D" unique_id=288001359]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_fh525")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=206569562]
+position = Vector2(8, 8)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_ka0lg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=221567705]
+position = Vector2(8, 8)
+texture = ExtResource("2_ifg5m")
